@@ -22,12 +22,20 @@
 
 == Contributing (später in eigene Datei auslagern)
 
+=== Voraussetzungen
+
+Siehe Abschnitt Building Boxes -> Requirements in `README.md`
+
+=== Basebox anpassen / bauen
+
 Die GSB-Basebox für Vagrant hat folgende Eigenschaften:
 
 * Betriebssystem: CentOS Stream 9
 * Festplatte: 256GB, dynamisch allokiert
 
-1. Anpassungen durchführen
+Sie wird wie folgt angepasst und gebaut:
+
+1. Anpassen (nur bei Bedarf)
 +
 |===
 |Pfad |Erläuterung |Beispiel
@@ -51,10 +59,17 @@ lang de_DE.UTF-8
 |===
 
 
-2. Basebox bauen (in Wurzelverzeichnis dieses Projekts)
+2. Bauen
 +
 [source,bash]
 ----
 ./bin/build-gsb-basebox.sh
 ----
 *oder* IDEA Run Configuration `build-gsb-basebox` ausführen.
+
+3. In Vagrant testen
++
+[source,bash]
+----
+vagrant init gsbdev ./build/TODO
+----
