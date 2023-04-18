@@ -5,6 +5,10 @@
 * [x] Bento Fork erstellen
 * [x] VirtualBox, Vagrant und Packer auf MB installieren
 * [ ] Anpassungen für CO9 vornehmen und Vagrantfile zum Testen anlegen
+** [ ] Ansible
+** [ ] Git
+** [ ] X Window System
+** [ ] Xfce
 * [ ] sobald Basebox fertig, Anpassungen pushen
 * [ ] Bento Fork auf NB klonen
 * [ ] VirtualBox, Vagrant und Packer auf NB installieren
