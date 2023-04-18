@@ -9,4 +9,5 @@ vmware_guest_os_type    = "centos-64"
 boot_command            = [
   "<wait><up><wait><tab> inst.text inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/rhel/9ks-gsb.cfg<enter><wait>"
 ]
-disk_size               = 256000
+disk_size = 256000
+headless  = false
