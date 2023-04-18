@@ -15,3 +15,42 @@
 * [ ] Vagrantfile anpassen
 * [ ] Integrationstest durchführen
 * [ ] Bereitstellen aber wie?
+
+== Contributing (später in eigene Datei auslagern)
+
+Die GSB-Basebox für Vagrant hat folgende Eigenschaften:
+
+* Betriebssystem: CentOS Stream 9
+* Festplatte: 256GB, dynamisch allokiert
+
+1. Anpassungen durchführen
++
+|===
+|Pfad |Erläuterung |Beispiel
+
+|os_pkrvars/centos/centos-stream-9-gsb-x86_64.pkrvars.hcl
+|Enthält allgemeine Variablen zur Konfiguration der Basebox. Siehe auch https://developer.hashicorp.com/packer/plugins/builders/virtualbox/iso[VirtualBox-ISO Builder Configuration Reference] für eine vollständige
+Liste der zur Verfügung stehenden Variablen
+a|
+.Größe der Festplatte anpassen
+----
+disk_size = 256000
+----
+
+|packer_templates/http/rhel/9ks-gsb.cfg
+|https://docs.centos.org/en-US/centos/install-guide/Kickstart2/#sect-kickstart-syntax[Kickstart-Datei] zur Automatisierung der Installation von CentOS Stream 9.
+a|
+.Sprache der Installation und des Systems auf Deutsch setzen:
+----
+lang de_DE.UTF-8
+----
+|===
+
+
+2. Basebox bauen (in Wurzelverzeichnis dieses Projekts)
++
+[source,bash]
+----
+./bin/build-gsb-basebox.sh
+----
+*oder* IDEA Run Configuration `build-gsb-basebox` ausführen.
