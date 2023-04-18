@@ -1,0 +1,17 @@
+= Entwicklungsprozess
+
+== Vorgehen
+
+* [x] Bento Fork erstellen
+* [x] VirtualBox, Vagrant und Packer auf MB installieren
+* [ ] Anpassungen für CO9 vornehmen und Vagrantfile zum Testen anlegen
+* [ ] sobald Basebox fertig, Anpassungen pushen
+* [ ] Bento Fork auf NB klonen
+* [ ] VirtualBox, Vagrant und Packer auf NB installieren
+* [ ] Basebox generieren
+
+=== Nach Einrichtung VPN / Zugriff Bitbucket (ggf. auch über andere)
+
+* [ ] Vagrantfile anpassen
+* [ ] Integrationstest durchführen
+* [ ] Bereitstellen aber wie?
